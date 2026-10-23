@@ -1,0 +1,16 @@
+---
+import { site } from '../data/site.js';
+const c = site.contact;
+---
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-panel" data-reveal>
+      <h2>{c.title}</h2>
+      <p class="lead">{c.text}</p>
+      <ul class="contact-list">
+        <li><span>Courriel</span><a class="link" href={`mailto:${c.email}`}>{c.email}</a></li>
+        <li><span>Téléphone</span><a class="link" href={`tel:${c.phone.replace(/\s/g, '')}`}>{c.phone}</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

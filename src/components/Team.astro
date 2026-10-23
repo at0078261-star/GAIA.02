@@ -1,0 +1,33 @@
+---
+import { site } from '../data/site.js';
+import { team } from '../data/team.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const t = site.team;
+const levels = [...new Set(team.map((m) => m.level))].sort((a, b) => a - b);
+---
+<section class="section section-sage" id="equipe">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-reveal>{t.title}</h2>
+      <p class="lead" data-reveal>{t.intro}</p>
+    </div>
+
+    <div class="org">
+      {levels.map((lvl) => (
+        <ul class={`org-row org-row-${lvl}`} data-stagger aria-label={`Niveau ${lvl} de l'organigramme`}>
+          {team.filter((m) => m.level === lvl).map((m) => (
+            <li class="member" data-reveal data-tilt>
+              <div class="member-photo">
+                <img src={`${base}/${m.image}`} alt={`Portrait de ${m.name}, ${m.role}`} width="600" height="750" loading="lazy" />
+              </div>
+              <p class="member-level">{m.levelLabel}</p>
+              <h3>{m.role}</h3>
+              <p class="member-name">{m.name}</p>
+              <p class="member-desc">{m.description}</p>
+            </li>
+          ))}
+        </ul>
+      ))}
+    </div>
+  </div>
+</section>

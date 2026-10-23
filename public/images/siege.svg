@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Illustration du siège de l’association">
+  <defs>
+    <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9efdc"/><stop offset="1" stop-color="#f6f1e3"/></linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#sk)"/>
+  <circle cx="500" cy="90" r="46" fill="#f2dfa6" opacity=".7"/>
+  <path d="M0 330 Q160 270 320 320 T640 300 V420 H0z" fill="#b9cfae"/>
+  <path d="M0 365 Q200 320 380 360 T640 345 V420 H0z" fill="#7da081"/>
+  <g class="house">
+    <rect x="215" y="195" width="210" height="140" fill="#f6f1e3" stroke="#1f4a36" stroke-width="4"/>
+    <path d="M200 200 L320 120 L440 200z" fill="#1f4a36"/>
+    <rect x="300" y="262" width="42" height="73" fill="#8a6a3d"/>
+    <rect x="235" y="225" width="46" height="40" fill="#cfe0d2" stroke="#1f4a36" stroke-width="3"/>
+    <rect x="360" y="225" width="46" height="40" fill="#cfe0d2" stroke="#1f4a36" stroke-width="3"/>
+  </g>
+  <g class="sway" fill="#2f6a4b">
+    <path d="M120 340 C100 300 110 260 140 240 C150 280 148 310 120 340z"/>
+    <path d="M520 340 C545 300 540 262 510 238 C498 280 500 312 520 340z"/>
+    <path d="M90 345 C80 320 88 300 104 290 C110 312 106 330 90 345z" fill="#4f8a62"/>
+  </g>
+</svg>

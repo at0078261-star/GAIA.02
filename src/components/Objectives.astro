@@ -1,0 +1,23 @@
+---
+import { site } from '../data/site.js';
+const o = site.objectives;
+---
+<section class="section section-sage" id="objectifs">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-reveal>{o.title}</h2>
+      <p class="lead" data-reveal>{o.intro}</p>
+    </div>
+    <ul class="objectives" data-stagger>
+      {o.items.map((it) => (
+        <li class="objective" data-reveal>
+          <svg class="objective-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+            <path d="M20 35C11 31 8 22 11 12c8 0 15 4 15 12 0 4-2 8-6 11z" fill="currentColor" opacity=".9" />
+          </svg>
+          <h3>{it.title}</h3>
+          <p>{it.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

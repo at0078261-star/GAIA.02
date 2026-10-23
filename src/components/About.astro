@@ -1,0 +1,29 @@
+---
+import { site } from '../data/site.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const a = site.about;
+const v = site.values;
+---
+<section class="section" id="association">
+  <div class="container about">
+    <figure class="about-media" data-reveal="mask">
+      <img src={`${base}/${a.image}`} alt={a.imageAlt} width="900" height="1100" loading="lazy" />
+    </figure>
+    <div class="about-text">
+      <h2 data-reveal>{a.title}</h2>
+      {a.paragraphs.map((p) => <p class="lead" data-reveal>{p}</p>)}
+    </div>
+  </div>
+
+  <div class="container values-wrap">
+    <h3 class="values-title" data-reveal>{v.title}</h3>
+    <ul class="values" data-stagger>
+      {v.items.map((it) => (
+        <li data-reveal>
+          <h4>{it.title}</h4>
+          <p>{it.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import { site } from '../data/site.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const h = site.hero;
+---
+<section class="hero" id="accueil" data-hero>
+  <div class="hero-bg" data-parallax style={`background-image:url('${base}/images/hero.jpg')`} aria-hidden="true"></div>
+  <div class="hero-light" aria-hidden="true"></div>
+  <div class="hero-shade" aria-hidden="true"></div>
+
+  <svg class="hero-fern" viewBox="0 0 200 420" aria-hidden="true">
+    <path class="fern-stem" pathLength="1" d="M100 410 C96 320 108 220 100 20" />
+    {[...Array(9)].map((_, i) => (
+      <g>
+        <path class="fern-leaf" pathLength="1" style={`--i:${i}`} d={`M${100 + (i % 2 ? 3 : -3)} ${380 - i * 38} q${i % 2 ? 46 : -46} -${14 + i} ${i % 2 ? 70 : -70} -${34 - i}`} />
+      </g>
+    ))}
+  </svg>
+
+  <div class="container hero-content">
+    <p class="hero-kicker hero-step" style="--s:0">{site.tagline}</p>
+    <h1 class="hero-step" style="--s:1">{h.title}</h1>
+    <p class="hero-text hero-step" style="--s:2">{h.text}</p>
+    <div class="hero-actions hero-step" style="--s:3">
+      <a class="btn btn-light" href={h.primary.href}>{h.primary.label}</a>
+      <a class="btn btn-ghost" href={h.secondary.href}>{h.secondary.label}</a>
+    </div>
+  </div>
+</section>

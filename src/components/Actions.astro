@@ -1,0 +1,27 @@
+---
+import { site } from '../data/site.js';
+import { actions } from '../data/actions.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const a = site.actions;
+---
+<section class="section" id="actions">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-reveal>{a.title}</h2>
+      <p class="lead" data-reveal>{a.intro}</p>
+    </div>
+    <ul class="actions" data-stagger>
+      {actions.map((it) => (
+        <li class="action" data-reveal>
+          <div class="action-media">
+            <img src={`${base}/${it.image}`} alt={it.alt} width="900" height="600" loading="lazy" />
+          </div>
+          <div class="action-body">
+            <h3>{it.title}</h3>
+            <p>{it.text}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

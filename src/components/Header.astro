@@ -1,0 +1,29 @@
+---
+import { site } from '../data/site.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href={`${base}/#accueil`} aria-label="GAIA — retour à l'accueil">
+      <svg class="brand-mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="currentColor" opacity=".12" />
+        <path class="brand-leaf" d="M24 39C14 34 11 24 14 13c9 0 17 4 17 14 0 5-3 9-7 12z" fill="currentColor" />
+        <path d="M24 39c0-8 2-14 7-20" stroke="var(--ivory)" stroke-width="2" fill="none" stroke-linecap="round" />
+      </svg>
+      <span class="brand-name">GAIA</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
+      <span class="sr-only">Menu</span>
+      <span class="menu-bars" aria-hidden="true"></span>
+    </button>
+
+    <nav id="menu-principal" class="nav" aria-label="Navigation principale" data-nav>
+      <ul>
+        {site.nav.map((item) => (
+          <li><a href={item.href} data-nav-link>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

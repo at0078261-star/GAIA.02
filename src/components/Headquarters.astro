@@ -1,0 +1,19 @@
+---
+import { site } from '../data/site.js';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const h = site.headquarters;
+---
+<section class="section" id="siege">
+  <div class="container hq">
+    <div class="hq-text">
+      <h2 data-reveal>{h.title}</h2>
+      <p class="lead" data-reveal>{h.text}</p>
+      <address data-reveal>
+        {h.address.map((l) => <span>{l}</span>)}
+      </address>
+    </div>
+    <figure class="hq-media" data-reveal="mask">
+      <img src={`${base}/images/siege.svg`} alt="Illustration d'une maison entourée de végétation, siège de l'association" width="640" height="420" loading="lazy" />
+    </figure>
+  </div>
+</section>
