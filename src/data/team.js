@@ -10,7 +10,7 @@
 // ─────────────────────────────────────────────────────────────
 export const team = [
   { id: 1, level: 1, levelLabel: 'Niveau 1 · Direction générale', name: 'Ahmed Turki', role: 'Président-directeur général (PDG)', description: 'Vision · Stratégie · Décisions finales · Supervision générale', image: 'images/team/member-1.jpg' },
-  { id: 2, level: 2, levelLabel: 'Niveau 2', name: 'basim guidri', role: 'Directeur des opérations', description: 'Planning · Logistique · Répartition du travail', image: 'images/team/member-2.jpg' },
+  { id: 2, level: 2, levelLabel: 'Niveau 2', name: 'Bacem guedri', role: 'Directeur des opérations', description: 'Planning · Logistique · Répartition du travail', image: 'images/team/member-2.jpg' },
   { id: 3, level: 2, levelLabel: 'Niveau 2', name: 'Farah Soussi', role: 'Directeur de la stratégie environnementale', description: 'Objectifs · Cohérence · Impact écologique', image: 'images/team/member-3.jpg' },
   { id: 4, level: 3, levelLabel: 'Niveau 3', name: 'elmadi mohamed', role: 'Responsable de recherche', description: 'Données et sources scientifiques', image: 'images/team/member-4.jpg' },
   { id: 5, level: 3, levelLabel: 'Niveau 3', name: 'loujainlabidi', role: 'Responsable des événements', description: 'Activités et organisation', image: 'images/team/member-5.jpg' },
